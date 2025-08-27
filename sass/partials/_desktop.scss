@@ -1,0 +1,283 @@
+/* DESKTOP */
+@media screen and (min-width: 740px) {
+
+/* index */
+    .imagenes-obras {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    }
+    .home-texto{
+    color: white;
+    font-size: 200%;
+    background-color: black;
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .subtitulo-carrusel{
+    font-size: 120% ;
+    text-transform:uppercase;
+    font-weight: bold;
+    padding: 1rem 1rem 0rem 1rem;
+    }
+
+/* bibliografia */
+    .grilla-bibliografia {
+    display: grid;
+    grid-template-areas:
+        "imagen-bibliografia parrafo-1"
+        "imagen-bibliografia parrafo-2"
+        "imagen-bibliografia parrafo-3"
+        "imagen-bibliografia parrafo-4"
+        "imagen-bibliografia parrafo-5"
+        "h2 h2";
+        .imagen-bibliografia {
+        grid-area: imagen-bibliografia;
+        width: 50vw;
+        }
+        .parrafo-bibliografia-1{
+        grid-area: parrafo-1;
+        font-size: 20px;
+        padding: 0rem 1rem 0rem 1rem;
+        }
+        .parrafo-bibliografia-2{
+        grid-area: parrafo-2;
+        font-size: 20px;
+        padding: 0rem 1rem 0rem 1rem;
+        }
+        .parrafo-bibliografia-3{
+        grid-area: parrafo-3;
+        font-size: 20px;
+        padding: 0rem 1rem 0rem 1rem;
+        }
+        .parrafo-bibliografia-4{
+        grid-area: parrafo-4;
+        font-size: 20px;
+        padding: 0rem 1rem 0rem 1rem;
+        }
+        .parrafo-bibliografia-5{
+        grid-area: parrafo-5;
+        font-size: 20px;
+        padding: 0rem 1rem 2rem 1rem;
+        }
+        .titulo-conferencias{
+        padding-left: 2rem;
+        grid-area: h2;
+        text-transform:uppercase;
+        font-size: 30px;
+        }
+        .menu-conferencias{
+        display: grid;
+        grid-column: 1fr 1fr;
+            .conferencias{
+            color: black;
+            font-size: 20px;
+            padding-right: 2rem;
+            text-decoration: none;
+            }
+        }
+    }
+
+/* WORK */
+
+/* grilla-proyectos */
+    .grilla-work {
+    display: grid;
+    grid-template-areas:
+        "img1 img2"
+        "img3 img4"
+        "img5 img6";
+    padding-left: 2rem;  
+    padding-right: 2rem;
+    gap: 2rem;
+        img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        display: block; 
+        }
+    }
+
+/* grilla dentro de los proyectos  */
+    .titulo-pagina{
+    font-weight: bold;
+    text-transform:uppercase;
+    padding-left: 2rem;
+    }
+    .seccion-work{
+    text-decoration: none;
+    padding-left: 1%;
+    color: black;
+    }
+    .distribucion-texto {
+    padding: 0rem 2rem 0rem 2rem;
+    }
+    .grilla {
+    display: grid;
+    grid-template-areas:
+        "img1 img2"
+        "img3 img4"
+        "img5 img6"
+        "img5 img6"
+        "img7 img8"
+        "img9 img10"
+        "img11 img11";
+    padding-left: 2rem;  
+    padding-right: 2rem;
+    gap: 2rem;
+        .img1 {
+        grid-area: img1;
+        padding-top: 2rem;
+        }
+        .img2 {
+        grid-area: img2;
+        padding-top: 2rem;
+        }
+        .img3 {
+        grid-area: img3;
+        padding-top: 2rem;
+        }
+        .img4 {
+        grid-area: img4;
+        padding-top: 2rem;
+        }
+        .img5 {
+        grid-area: img5;
+        padding-top: 2rem;
+        }
+        .img6 {
+        grid-area: img6;
+        padding-top: 2rem;
+        }
+        .img7 {
+        grid-area: img7;
+        padding-top: 2rem;
+        }
+        .img8 {
+        grid-area: img8;
+        padding-top: 2rem;
+        }
+        .img9 {
+        grid-area: img9;
+        padding-top: 2rem;
+        }
+        .img10 {
+        grid-area: img10;
+        padding-top: 2rem;
+        }
+        .img11 {
+        grid-area: img11;
+        padding-top: 2rem;
+        }
+        img {                    
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        display: block;
+        border-radius: 2rem;
+        }
+    }
+    .grilla-planos{
+    display: grid;
+    grid-template-areas: 
+        "img12 img13"
+        "img14 img15"
+        "img16 img17"
+        "img18 img19"
+        "img20 img20";
+    padding-left: 2rem;  
+    padding-right: 2rem;
+    gap: 2rem;
+        .img12 {
+        grid-area: img12;
+        padding-top: 2rem;
+        }
+        .img13 {
+        grid-area: img13;
+        padding-top: 2rem;
+        }
+        .img14 {
+        grid-area: img14;
+        padding-top: 2rem;
+        }
+        .img15 {
+        grid-area: img15;
+        padding-top: 2rem;
+        }
+        .img16 {
+        grid-area: img16;
+        padding-top: 2rem;
+        }
+        .img17 {
+        grid-area: img17;
+        padding-top: 2rem;
+        }
+        .img18 {
+        grid-area: img18;
+        padding-top: 2rem;
+        }
+        .img19 {
+        grid-area: img19;
+        padding-top: 2rem;
+        }
+        .img20 {
+        grid-area: img20;
+        padding-top: 2rem;
+        }
+        img {                    
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        display: block;
+        border-radius: 2rem;
+        }
+    }
+
+    /* contact */
+    .formulario{
+    padding: 2rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 15%;
+        .formulario-nombre{
+        padding-top: 2rem;
+        }
+        .formulario-email{
+        padding-top: 2rem;
+        }
+        .formulario-mensaje{
+        padding-top: 2rem;
+        }
+    }
+
+    /* footer */
+    .footer{
+    height: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+        .izquierda{
+        font-size: 100%;
+        color: white;
+        padding: 2rem 2rem 2rem 2rem;
+        }
+        .derecha{
+        font-size: 100%;
+        color: white;
+        padding: 2rem 2rem 2rem 2rem;
+        }
+        .centro{
+        font-size: 100%;
+        text-decoration: none;
+        color: white;
+        padding: 2rem 2rem 2rem 2rem;
+        }
+    }
+}

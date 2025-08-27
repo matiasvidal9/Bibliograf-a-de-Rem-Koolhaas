@@ -1,0 +1,422 @@
+/* general de la pagina */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  font-family: montserrat, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* nav */
+.titulo-nav {
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu-nav {
+  color: white;
+}
+
+@media screen and (max-width: 740px) {
+  /* index */
+  .imagenes-obras {
+    height: 20rem;
+    object-fit: cover;
+  }
+  .home-texto {
+    background-color: black;
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home-texto .texto {
+    color: white;
+    font-size: 100%;
+    text-align: center;
+    padding: 5% 5% 5% 5%;
+  }
+  .subtitulo-carrusel {
+    font-size: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem 1rem 0rem 1rem;
+  }
+  /* WORK */
+  .grilla-work {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grilla-work img {
+    width: 100%;
+    height: 300px;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  /* WORK-PAGINAS */
+  .titulo-pagina {
+    font-size: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 5% 5% 5%;
+  }
+  .seccion-work {
+    color: black;
+    font-size: 100%;
+    margin: 5% 5% 5% 5%;
+    text-decoration: none;
+  }
+  .distribucion-texto {
+    margin: 5% 5% 5% 5%;
+  }
+  .grilla {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grilla img {
+    width: 90%;
+    height: auto;
+    margin: 0% 5% 5% 5%;
+  }
+  .grilla-planos {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grilla-planos img {
+    width: 90%;
+    height: auto;
+    margin: 0% 5% 5% 5%;
+  }
+  /* bibliografia */
+  .grilla-bibliografia {
+    display: grid;
+    grid-template-areas: "imagen-bibliografia imagen-bibliografia" "imagen-bibliografia imagen-bibliografia" "parrafo parrafo" "h2 h2";
+  }
+  .grilla-bibliografia .imagen-bibliografia {
+    grid-area: imagen-bibliografia;
+    width: 100vw;
+    height: auto;
+  }
+  .grilla-bibliografia .parrafo-bibliografia {
+    grid-area: parrafo;
+    font-size: 80%;
+    padding: 2rem 2rem 0rem 2rem;
+  }
+  .grilla-bibliografia .titulo-conferencias {
+    grid-area: h2;
+    font-size: 100%;
+    padding-left: 2rem;
+    text-transform: uppercase;
+  }
+  .grilla-bibliografia .menu-conferencias {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 80%;
+    padding-left: 2rem;
+  }
+  .grilla-bibliografia .menu-conferencias .conferencias {
+    color: black;
+    padding-right: 2rem;
+    text-decoration: none;
+  }
+  /* contacto */
+  .titulo-pagina-contacto {
+    font-size: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 5% 2% 5%;
+  }
+  .formulario {
+    display: block;
+    padding: 1% 5% 67% 5%;
+  }
+  .formulario .caja {
+    width: 100%;
+  }
+  /* footer */
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5% 5% 5% 5%;
+  }
+  .footer .izquierda {
+    color: white;
+    font-size: 60%;
+  }
+  .footer .derecha {
+    color: white;
+    font-size: 60%;
+  }
+  .footer .centro {
+    font-size: 60%;
+    color: white;
+    text-decoration: none;
+  }
+}
+/* DESKTOP */
+@media screen and (min-width: 740px) {
+  /* index */
+  .imagenes-obras {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+  }
+  .home-texto {
+    color: white;
+    font-size: 200%;
+    background-color: black;
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .subtitulo-carrusel {
+    font-size: 120%;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem 1rem 0rem 1rem;
+  }
+  /* bibliografia */
+  .grilla-bibliografia {
+    display: grid;
+    grid-template-areas: "imagen-bibliografia parrafo-1" "imagen-bibliografia parrafo-2" "imagen-bibliografia parrafo-3" "imagen-bibliografia parrafo-4" "imagen-bibliografia parrafo-5" "h2 h2";
+  }
+  .grilla-bibliografia .imagen-bibliografia {
+    grid-area: imagen-bibliografia;
+    width: 50vw;
+  }
+  .grilla-bibliografia .parrafo-bibliografia-1 {
+    grid-area: parrafo-1;
+    font-size: 20px;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+  .grilla-bibliografia .parrafo-bibliografia-2 {
+    grid-area: parrafo-2;
+    font-size: 20px;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+  .grilla-bibliografia .parrafo-bibliografia-3 {
+    grid-area: parrafo-3;
+    font-size: 20px;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+  .grilla-bibliografia .parrafo-bibliografia-4 {
+    grid-area: parrafo-4;
+    font-size: 20px;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+  .grilla-bibliografia .parrafo-bibliografia-5 {
+    grid-area: parrafo-5;
+    font-size: 20px;
+    padding: 0rem 1rem 2rem 1rem;
+  }
+  .grilla-bibliografia .titulo-conferencias {
+    padding-left: 2rem;
+    grid-area: h2;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .grilla-bibliografia .menu-conferencias {
+    display: grid;
+    grid-column: 1fr 1fr;
+  }
+  .grilla-bibliografia .menu-conferencias .conferencias {
+    color: black;
+    font-size: 20px;
+    padding-right: 2rem;
+    text-decoration: none;
+  }
+  /* WORK */
+  /* grilla-proyectos */
+  .grilla-work {
+    display: grid;
+    grid-template-areas: "img1 img2" "img3 img4" "img5 img6";
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 2rem;
+  }
+  .grilla-work img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+  }
+  /* grilla dentro de los proyectos  */
+  .titulo-pagina {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 2rem;
+  }
+  .seccion-work {
+    text-decoration: none;
+    padding-left: 1%;
+    color: black;
+  }
+  .distribucion-texto {
+    padding: 0rem 2rem 0rem 2rem;
+  }
+  .grilla {
+    display: grid;
+    grid-template-areas: "img1 img2" "img3 img4" "img5 img6" "img5 img6" "img7 img8" "img9 img10" "img11 img11";
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 2rem;
+  }
+  .grilla .img1 {
+    grid-area: img1;
+    padding-top: 2rem;
+  }
+  .grilla .img2 {
+    grid-area: img2;
+    padding-top: 2rem;
+  }
+  .grilla .img3 {
+    grid-area: img3;
+    padding-top: 2rem;
+  }
+  .grilla .img4 {
+    grid-area: img4;
+    padding-top: 2rem;
+  }
+  .grilla .img5 {
+    grid-area: img5;
+    padding-top: 2rem;
+  }
+  .grilla .img6 {
+    grid-area: img6;
+    padding-top: 2rem;
+  }
+  .grilla .img7 {
+    grid-area: img7;
+    padding-top: 2rem;
+  }
+  .grilla .img8 {
+    grid-area: img8;
+    padding-top: 2rem;
+  }
+  .grilla .img9 {
+    grid-area: img9;
+    padding-top: 2rem;
+  }
+  .grilla .img10 {
+    grid-area: img10;
+    padding-top: 2rem;
+  }
+  .grilla .img11 {
+    grid-area: img11;
+    padding-top: 2rem;
+  }
+  .grilla img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    border-radius: 2rem;
+  }
+  .grilla-planos {
+    display: grid;
+    grid-template-areas: "img12 img13" "img14 img15" "img16 img17" "img18 img19" "img20 img20";
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 2rem;
+  }
+  .grilla-planos .img12 {
+    grid-area: img12;
+    padding-top: 2rem;
+  }
+  .grilla-planos .img13 {
+    grid-area: img13;
+    padding-top: 2rem;
+  }
+  .grilla-planos .img14 {
+    grid-area: img14;
+    padding-top: 2rem;
+  }
+  .grilla-planos .img15 {
+    grid-area: img15;
+    padding-top: 2rem;
+  }
+  .grilla-planos .img16 {
+    grid-area: img16;
+    padding-top: 2rem;
+  }
+  .grilla-planos .img17 {
+    grid-area: img17;
+    padding-top: 2rem;
+  }
+  .grilla-planos .img18 {
+    grid-area: img18;
+    padding-top: 2rem;
+  }
+  .grilla-planos .img19 {
+    grid-area: img19;
+    padding-top: 2rem;
+  }
+  .grilla-planos .img20 {
+    grid-area: img20;
+    padding-top: 2rem;
+  }
+  .grilla-planos img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    border-radius: 2rem;
+  }
+  /* contact */
+  .formulario {
+    padding: 2rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 15%;
+  }
+  .formulario .formulario-nombre {
+    padding-top: 2rem;
+  }
+  .formulario .formulario-email {
+    padding-top: 2rem;
+  }
+  .formulario .formulario-mensaje {
+    padding-top: 2rem;
+  }
+  /* footer */
+  .footer {
+    height: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .izquierda {
+    font-size: 100%;
+    color: white;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  .footer .derecha {
+    font-size: 100%;
+    color: white;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  .footer .centro {
+    font-size: 100%;
+    text-decoration: none;
+    color: white;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
