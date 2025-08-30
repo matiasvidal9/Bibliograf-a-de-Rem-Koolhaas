@@ -88,23 +88,16 @@
 
     .grilla-bibliografia{
         display: grid;
-        grid-template-areas:
-        "imagen-bibliografia imagen-bibliografia"
-        "imagen-bibliografia imagen-bibliografia"
-        "parrafo parrafo"
-        "h2 h2";
+        grid-column: 1fr;
         .imagen-bibliografia {
-            grid-area: imagen-bibliografia;
             width: 100vw;
             height: auto;
         }
-        .parrafo-bibliografia{
-            grid-area: parrafo;
-            font-size: 80%;
+        p{
+            font-size: 100%;
             @include padding(2rem, 2rem, 0rem, 2rem);
         }
         .titulo-conferencias{
-            grid-area: h2;
             font-size: 100%;
             padding-left: 2rem;
             text-transform:uppercase;
@@ -117,6 +110,7 @@
             font-size: 80%;
             padding-left: 2rem;
             .conferencias{
+                font-size: 100%;
                 color: black;
                 padding-right: 2rem;
                 text-decoration: none;
