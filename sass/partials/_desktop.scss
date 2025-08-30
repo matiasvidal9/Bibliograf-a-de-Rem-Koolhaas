@@ -24,6 +24,7 @@
     .imagenes-obras {
     @include tamaño(100%, 100vh);
     object-fit: cover;
+    border-radius: 0rem;
         &:hover {
         transform: scale(1);
         }
