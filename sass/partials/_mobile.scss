@@ -1,150 +1,160 @@
+@use "general" as*;
+
 @media screen and (max-width: 740px) {
-    
-/* index */
-.imagenes-obras {
-    height: 20rem;      
-    object-fit: cover;
-}
-.home-texto{
-    background-color: black;
-    width: 100%;
-    height: 20rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .texto{
-    color: white;
-    font-size: 100%;
-    text-align: center;
-    padding: 5% 5% 5% 5%;
+
+/* MIXIN-MOBILE */
+    @mixin flex($direction, $justify, $align) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        align-items: $align;
     }
-}
-.subtitulo-carrusel{
-    font-size: 100% ;
-    text-transform:uppercase;
-    font-weight: bold;
-    padding: 1rem 1rem 0rem 1rem;
-}
+    @mixin tamaño($width, $height) {
+        width: $width;
+        height: $height;
+    }
+    @mixin padding($top, $right, $bottom, $left) {
+        padding: $top $right $bottom $left;
+    }
+    @mixin margin($top, $right, $bottom, $left) {
+        margin: $top $right $bottom $left;
+    }
+/* index */
+    .imagenes-obras {
+        height: 20rem;      
+        object-fit: cover;
+    }
+    .home-texto{
+        background-color: $negro;
+        @include tamaño(100%, 20rem);
+        @include flex(row, center, center);
+        .texto{
+            color: $blanco;
+            font-size: 100%;
+            text-align: center;
+            @include padding(5%,5%,5%,5%);
+        }
+    }
+    .subtitulo-carrusel{
+        font-size: 100% ;
+        text-transform:uppercase;
+        font-weight: bold;
+        @include padding(1rem, 1rem, 0rem, 1rem);
+    }
 
 /* WORK */
-.grilla-work{
-    display: grid;
-    grid-template-columns: 1fr;
-    img {
-    width: 100%;
-    height: 300px;
-    padding: 1rem 1rem 1rem 1rem;
+    .grilla-work{
+        display: grid;
+        grid-template-columns: 1fr;
+        img {
+            @include tamaño(100%, 300px);
+            @include padding(1rem, 1rem, 1rem, 1rem);
+        }
     }
-}
 /* WORK-PAGINAS */
-.titulo-pagina{
-    font-size: 100%;
-    font-weight: bold;
-    text-transform:uppercase;
-    margin: 0 5% 5% 5%;
-}
-.seccion-work{
-    color: black;
-    font-size: 100%;
-    margin: 5% 5% 5% 5%;
-    text-decoration: none;
-}
-.distribucion-texto{
-    margin: 5% 5% 5% 5%;
-}
-.grilla{
-    display: grid;
-    grid-template-columns: 1fr;
-    img{
-    width: 90%;
-    height: auto;
-    margin: 0% 5% 5% 5%;
+    .titulo-pagina{
+        font-size: 100%;
+        font-weight: bold;
+        text-transform:uppercase;
+        @include margin(0,5%,5%,5%);
     }
-}
-.grilla-planos{
-    display: grid;
-    grid-template-columns: 1fr;
-    img{
-    width: 90%;
-    height: auto;
-    margin: 0% 5% 5% 5%;
+    .seccion-work{
+        color: $negro;
+        font-size: 100%;
+        text-decoration: none;
+        @include margin(5%,5%,5%,5%);
     }
-}
+    .distribucion-texto{
+        @include margin(5%,5%,5%,5%);
+    }
+    .grilla{
+        display: grid;
+        grid-template-columns: 1fr;
+        img{
+        @include tamaño(90%, auto);
+        @include margin(0%,5%,5%,5%);
+        }
+    }
+    .grilla-planos{
+        display: grid;
+        grid-template-columns: 1fr;
+        img{
+        @include tamaño(90%, auto);
+        @include margin(0%,5%,5%,5%);
+        }
+    }
 
 /* bibliografia */
 
-.grilla-bibliografia{
-    display: grid;
-    grid-template-areas:
-    "imagen-bibliografia imagen-bibliografia"
-    "imagen-bibliografia imagen-bibliografia"
-    "parrafo parrafo"
-    "h2 h2";
-    .imagen-bibliografia {
-    grid-area: imagen-bibliografia;
-    width: 100vw;
-    height: auto;
-    }
-    .parrafo-bibliografia{
-    grid-area: parrafo;
-    font-size: 80%;
-    padding: 2rem 2rem 0rem 2rem;
-    }
-    .titulo-conferencias{
-    grid-area: h2;
-    font-size: 100%;
-    padding-left: 2rem;
-    text-transform:uppercase;
-    }
-.menu-conferencias {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-size: 80%;
-    padding-left: 2rem;
-        .conferencias{
-        color: black;
-        padding-right: 2rem;
-        text-decoration: none;
+    .grilla-bibliografia{
+        display: grid;
+        grid-template-areas:
+        "imagen-bibliografia imagen-bibliografia"
+        "imagen-bibliografia imagen-bibliografia"
+        "parrafo parrafo"
+        "h2 h2";
+        .imagen-bibliografia {
+            grid-area: imagen-bibliografia;
+            width: 100vw;
+            height: auto;
+        }
+        .parrafo-bibliografia{
+            grid-area: parrafo;
+            font-size: 80%;
+            @include padding(2rem, 2rem, 0rem, 2rem);
+        }
+        .titulo-conferencias{
+            grid-area: h2;
+            font-size: 100%;
+            padding-left: 2rem;
+            text-transform:uppercase;
+        }
+        .menu-conferencias {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-size: 80%;
+            padding-left: 2rem;
+            .conferencias{
+                color: black;
+                padding-right: 2rem;
+                text-decoration: none;
+            }
         }
     }
-}
 
 /* contacto */
-.titulo-pagina-contacto{
-    font-size: 100%;
-    font-weight: bold;
-    text-transform:uppercase;
-    margin: 0 5% 2% 5%;
-}
-.formulario{
-    display: block;
-    padding: 1% 5% 67% 5%;
-    .caja{
-    width: 100%;
+    .titulo-pagina-contacto{
+        font-size: 100%;
+        font-weight: bold;
+        text-transform:uppercase;
+        @include margin(0,5%,2%,5%);
     }
-}
+    .formulario{
+        display: block;
+        @include padding(1%,5%,67%,5%);
+        .caja{
+            width: 100%;
+        }
+    }
 
 /* footer */
-.footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 5% 5% 5% 5%;
-    .izquierda{
-    color: white;
-    font-size: 60%;
+    .footer{
+        @include flex(row,space-between,flex-start);
+        @include padding(5%,5%,5%,5%);
+        .izquierda{
+            color: $blanco;
+            font-size: 60%;
+        }
+        .derecha{
+            color: $blanco;
+            font-size: 60%;
+        }
+        .centro{
+            font-size: 60%;
+            color: $blanco;
+            text-decoration: none;
+        }
     }
-    .derecha{
-    color: white;
-    font-size: 60%;
-    }
-    .centro{
-    font-size: 60%;
-    color: white;
-    text-decoration: none;
-    }
-}
 }

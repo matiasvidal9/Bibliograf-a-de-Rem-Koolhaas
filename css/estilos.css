@@ -13,32 +13,34 @@ body {
 
 /* nav */
 .titulo-nav {
-  color: white;
+  color: #ffffff;
   font-size: 100%;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .menu-nav {
-  color: white;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 740px) {
+  /* MIXIN-MOBILE */
   /* index */
   .imagenes-obras {
     height: 20rem;
     object-fit: cover;
   }
   .home-texto {
-    background-color: black;
+    background-color: #000000;
     width: 100%;
     height: 20rem;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
   .home-texto .texto {
-    color: white;
+    color: #ffffff;
     font-size: 100%;
     text-align: center;
     padding: 5% 5% 5% 5%;
@@ -67,10 +69,10 @@ body {
     margin: 0 5% 5% 5%;
   }
   .seccion-work {
-    color: black;
+    color: #000000;
     font-size: 100%;
-    margin: 5% 5% 5% 5%;
     text-decoration: none;
+    margin: 5% 5% 5% 5%;
   }
   .distribucion-texto {
     margin: 5% 5% 5% 5%;
@@ -150,34 +152,36 @@ body {
     padding: 5% 5% 5% 5%;
   }
   .footer .izquierda {
-    color: white;
+    color: #ffffff;
     font-size: 60%;
   }
   .footer .derecha {
-    color: white;
+    color: #ffffff;
     font-size: 60%;
   }
   .footer .centro {
     font-size: 60%;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
   }
 }
 /* DESKTOP */
 @media screen and (min-width: 740px) {
+  /* MIXIN-MOBILE */
   /* index */
   .imagenes-obras {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     object-fit: cover;
   }
   .home-texto {
-    color: white;
+    color: #ffffff;
     font-size: 200%;
-    background-color: black;
+    background-color: #000000;
     width: 100%;
     height: 20rem;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -190,36 +194,28 @@ body {
   /* bibliografia */
   .grilla-bibliografia {
     display: grid;
-    grid-template-areas: "imagen-bibliografia parrafo-1" "imagen-bibliografia parrafo-2" "imagen-bibliografia parrafo-3" "imagen-bibliografia parrafo-4" "imagen-bibliografia parrafo-5" "h2 h2";
+    grid-template-areas: "imagen-bibliografia parrafo-1" "imagen-bibliografia parrafo-2" "imagen-bibliografia parrafo-3" "parrafo-4 parrafo-5" "h2 h2";
   }
   .grilla-bibliografia .imagen-bibliografia {
     grid-area: imagen-bibliografia;
     width: 50vw;
   }
-  .grilla-bibliografia .parrafo-bibliografia-1 {
+  .grilla-bibliografia .parrafo-bibliografia-1, .grilla-bibliografia .parrafo-bibliografia-5, .grilla-bibliografia .parrafo-bibliografia-4, .grilla-bibliografia .parrafo-bibliografia-3, .grilla-bibliografia .parrafo-bibliografia-2 {
     grid-area: parrafo-1;
     font-size: 20px;
     padding: 0rem 1rem 0rem 1rem;
   }
   .grilla-bibliografia .parrafo-bibliografia-2 {
     grid-area: parrafo-2;
-    font-size: 20px;
-    padding: 0rem 1rem 0rem 1rem;
   }
   .grilla-bibliografia .parrafo-bibliografia-3 {
     grid-area: parrafo-3;
-    font-size: 20px;
-    padding: 0rem 1rem 0rem 1rem;
   }
   .grilla-bibliografia .parrafo-bibliografia-4 {
     grid-area: parrafo-4;
-    font-size: 20px;
-    padding: 0rem 1rem 0rem 1rem;
   }
   .grilla-bibliografia .parrafo-bibliografia-5 {
     grid-area: parrafo-5;
-    font-size: 20px;
-    padding: 0rem 1rem 2rem 1rem;
   }
   .grilla-bibliografia .titulo-conferencias {
     padding-left: 2rem;
@@ -232,7 +228,7 @@ body {
     grid-column: 1fr 1fr;
   }
   .grilla-bibliografia .menu-conferencias .conferencias {
-    color: black;
+    color: #000000;
     font-size: 20px;
     padding-right: 2rem;
     text-decoration: none;
@@ -246,11 +242,32 @@ body {
     padding-right: 2rem;
     gap: 2rem;
   }
+  .grilla-work .img1, .grilla-work .img2 {
+    grid-area: img1;
+    margin-top: 2rem;
+  }
+  .grilla-work .img2 {
+    grid-area: img2;
+  }
+  .grilla-work .img3 {
+    grid-area: img3;
+  }
+  .grilla-work .img4 {
+    grid-area: img4;
+  }
+  .grilla-work .img5, .grilla-work .img6 {
+    grid-area: img5;
+    margin-bottom: 2rem;
+  }
+  .grilla-work .img6 {
+    grid-area: img6;
+  }
   .grilla-work img {
     width: 100%;
     aspect-ratio: 4/3;
     object-fit: cover;
     display: block;
+    border-radius: 2rem;
   }
   /* grilla dentro de los proyectos  */
   .titulo-pagina {
@@ -261,111 +278,98 @@ body {
   .seccion-work {
     text-decoration: none;
     padding-left: 1%;
-    color: black;
+    color: #000000;
   }
   .distribucion-texto {
     padding: 0rem 2rem 0rem 2rem;
   }
   .grilla {
     display: grid;
-    grid-template-areas: "img1 img2" "img3 img4" "img5 img6" "img5 img6" "img7 img8" "img9 img10" "img11 img11";
-    padding-left: 2rem;
-    padding-right: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img1 img2" "img3 img4" "img5 img6" "img7 img8" "img9 img10" "img11 img11";
+    padding: 0rem 2rem 0rem 2rem;
     gap: 2rem;
+    overflow: hidden;
   }
-  .grilla .img1 {
+  .img1, .grilla-work .img2 {
     grid-area: img1;
-    padding-top: 2rem;
   }
-  .grilla .img2 {
+  .img2 {
     grid-area: img2;
-    padding-top: 2rem;
   }
-  .grilla .img3 {
+  .img3 {
     grid-area: img3;
-    padding-top: 2rem;
   }
-  .grilla .img4 {
+  .img4 {
     grid-area: img4;
-    padding-top: 2rem;
   }
-  .grilla .img5 {
+  .img5, .grilla-work .img6 {
     grid-area: img5;
-    padding-top: 2rem;
   }
-  .grilla .img6 {
+  .img6 {
     grid-area: img6;
-    padding-top: 2rem;
   }
-  .grilla .img7 {
+  .img7 {
     grid-area: img7;
-    padding-top: 2rem;
   }
-  .grilla .img8 {
+  .img8 {
     grid-area: img8;
-    padding-top: 2rem;
   }
-  .grilla .img9 {
+  .img9 {
     grid-area: img9;
-    padding-top: 2rem;
   }
-  .grilla .img10 {
+  .img10 {
     grid-area: img10;
-    padding-top: 2rem;
   }
-  .grilla .img11 {
+  .img11 {
     grid-area: img11;
-    padding-top: 2rem;
+    margin-bottom: 2rem;
   }
-  .grilla img {
+  img {
     width: 100%;
     aspect-ratio: 4/3;
     object-fit: cover;
     display: block;
     border-radius: 2rem;
   }
+  img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+  }
   .grilla-planos {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "img12 img13" "img14 img15" "img16 img17" "img18 img19" "img20 img20";
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0rem 2rem 0rem 2rem;
     gap: 2rem;
+    overflow: hidden;
   }
   .grilla-planos .img12 {
     grid-area: img12;
-    padding-top: 2rem;
   }
   .grilla-planos .img13 {
     grid-area: img13;
-    padding-top: 2rem;
   }
   .grilla-planos .img14 {
     grid-area: img14;
-    padding-top: 2rem;
   }
   .grilla-planos .img15 {
     grid-area: img15;
-    padding-top: 2rem;
   }
   .grilla-planos .img16 {
     grid-area: img16;
-    padding-top: 2rem;
   }
   .grilla-planos .img17 {
     grid-area: img17;
-    padding-top: 2rem;
   }
   .grilla-planos .img18 {
     grid-area: img18;
-    padding-top: 2rem;
   }
   .grilla-planos .img19 {
     grid-area: img19;
-    padding-top: 2rem;
   }
   .grilla-planos .img20 {
     grid-area: img20;
-    padding-top: 2rem;
   }
   .grilla-planos img {
     width: 100%;
@@ -374,48 +378,44 @@ body {
     display: block;
     border-radius: 2rem;
   }
+  .grilla-planos img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+  }
   /* contact */
   .formulario {
     padding: 2rem 2rem 2rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: stretch;
     text-transform: uppercase;
     font-weight: bold;
     padding-bottom: 15%;
   }
-  .formulario .formulario-nombre {
-    padding-top: 2rem;
-  }
-  .formulario .formulario-email {
-    padding-top: 2rem;
-  }
-  .formulario .formulario-mensaje {
+  .formulario .formulario-nombre, .formulario .formulario-mensaje, .formulario .formulario-email {
     padding-top: 2rem;
   }
   /* footer */
   .footer {
     height: 100px;
-    background-color: black;
+    background-color: #000000;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
-  .footer .izquierda {
+  .footer .izquierda, .footer .centro, .footer .derecha {
     font-size: 100%;
-    color: white;
+    color: #ffffff;
     padding: 2rem 2rem 2rem 2rem;
   }
   .footer .derecha {
-    font-size: 100%;
-    color: white;
-    padding: 2rem 2rem 2rem 2rem;
+    color: #ffffff;
   }
   .footer .centro {
-    font-size: 100%;
+    color: #ffffff;
     text-decoration: none;
-    color: white;
-    padding: 2rem 2rem 2rem 2rem;
   }
 }
 

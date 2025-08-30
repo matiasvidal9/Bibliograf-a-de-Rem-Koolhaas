@@ -1,27 +1,42 @@
+@use "general" as*;
+
 /* DESKTOP */
 @media screen and (min-width: 740px) {
 
+/* MIXIN-MOBILE */
+    @mixin flex($direction, $justify, $align) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        align-items: $align;
+    }
+    @mixin tamaño($width, $height) {
+        width: $width;
+        height: $height;
+    }
+    @mixin padding($top, $right, $bottom, $left) {
+        padding: $top $right $bottom $left;
+    }
+    @mixin margin($top, $right, $bottom, $left) {
+        margin: $top $right $bottom $left;
+    }
 /* index */
     .imagenes-obras {
-    width: 100%;
-    height: 90vh;
+    @include tamaño(100%, 100vh);
     object-fit: cover;
     }
     .home-texto{
-    color: white;
+    color: $blanco;
     font-size: 200%;
-    background-color: black;
-    width: 100%;
-    height: 20rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: $negro;
+    @include tamaño(100%, 20rem);
+    @include flex(row, center, center);
     }
     .subtitulo-carrusel{
     font-size: 120% ;
     text-transform:uppercase;
     font-weight: bold;
-    padding: 1rem 1rem 0rem 1rem;
+    @include padding(1rem, 1rem, 0rem, 1rem);
     }
 
 /* bibliografia */
@@ -31,8 +46,7 @@
         "imagen-bibliografia parrafo-1"
         "imagen-bibliografia parrafo-2"
         "imagen-bibliografia parrafo-3"
-        "imagen-bibliografia parrafo-4"
-        "imagen-bibliografia parrafo-5"
+        "parrafo-4 parrafo-5"
         "h2 h2";
         .imagen-bibliografia {
         grid-area: imagen-bibliografia;
@@ -41,27 +55,23 @@
         .parrafo-bibliografia-1{
         grid-area: parrafo-1;
         font-size: 20px;
-        padding: 0rem 1rem 0rem 1rem;
+        @include padding(0rem, 1rem, 0rem, 1rem);
         }
         .parrafo-bibliografia-2{
         grid-area: parrafo-2;
-        font-size: 20px;
-        padding: 0rem 1rem 0rem 1rem;
+        @extend .parrafo-bibliografia-1;
         }
         .parrafo-bibliografia-3{
         grid-area: parrafo-3;
-        font-size: 20px;
-        padding: 0rem 1rem 0rem 1rem;
+        @extend .parrafo-bibliografia-1;
         }
         .parrafo-bibliografia-4{
         grid-area: parrafo-4;
-        font-size: 20px;
-        padding: 0rem 1rem 0rem 1rem;
+        @extend .parrafo-bibliografia-1;
         }
         .parrafo-bibliografia-5{
         grid-area: parrafo-5;
-        font-size: 20px;
-        padding: 0rem 1rem 2rem 1rem;
+        @extend .parrafo-bibliografia-1;
         }
         .titulo-conferencias{
         padding-left: 2rem;
@@ -73,7 +83,7 @@
         display: grid;
         grid-column: 1fr 1fr;
             .conferencias{
-            color: black;
+            color: $negro;
             font-size: 20px;
             padding-right: 2rem;
             text-decoration: none;
@@ -93,11 +103,34 @@
     padding-left: 2rem;  
     padding-right: 2rem;
     gap: 2rem;
+        .img1 {
+        grid-area: img1;
+        margin-top: 2rem;
+        }
+        .img2 {
+        grid-area: img2;
+        @extend .img1;
+        }
+        .img3 {
+        grid-area: img3;
+        }
+        .img4 {
+        grid-area: img4;
+        }
+        .img5 {
+        grid-area: img5;
+        margin-bottom: 2rem;
+        }
+        .img6 {
+        grid-area: img6;
+        @extend .img5;
+        }
         img {
         width: 100%;
         aspect-ratio: 4 / 3;
         object-fit: cover;
-        display: block; 
+        display: block;
+        border-radius: 2rem;
         }
     }
 
@@ -110,122 +143,108 @@
     .seccion-work{
     text-decoration: none;
     padding-left: 1%;
-    color: black;
+    color: $negro;
     }
     .distribucion-texto {
-    padding: 0rem 2rem 0rem 2rem;
+    @include padding(0rem,2rem ,0rem ,2rem);
     }
     .grilla {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "img1 img2"
         "img3 img4"
         "img5 img6"
-        "img5 img6"
         "img7 img8"
         "img9 img10"
         "img11 img11";
-    padding-left: 2rem;  
-    padding-right: 2rem;
-    gap: 2rem;
-        .img1 {
-        grid-area: img1;
-        padding-top: 2rem;
+        @include padding(0rem, 2rem, 0rem, 2rem);
+        gap: 2rem;
+        overflow: hidden;
+    }
+    .img1 {
+    grid-area: img1;
         }
-        .img2 {
-        grid-area: img2;
-        padding-top: 2rem;
+    .img2 {
+    grid-area: img2;
         }
-        .img3 {
-        grid-area: img3;
-        padding-top: 2rem;
+    .img3 {
+    grid-area: img3;
+    }
+    .img4 {
+    grid-area: img4;
         }
-        .img4 {
-        grid-area: img4;
-        padding-top: 2rem;
+    .img5 {
+    grid-area: img5;
         }
-        .img5 {
-        grid-area: img5;
-        padding-top: 2rem;
+    .img6 {
+    grid-area: img6;
         }
-        .img6 {
-        grid-area: img6;
-        padding-top: 2rem;
+    .img7 {
+    grid-area: img7;
         }
-        .img7 {
-        grid-area: img7;
-        padding-top: 2rem;
+    .img8 {
+    grid-area: img8;
         }
-        .img8 {
-        grid-area: img8;
-        padding-top: 2rem;
-        }
-        .img9 {
-        grid-area: img9;
-        padding-top: 2rem;
-        }
-        .img10 {
-        grid-area: img10;
-        padding-top: 2rem;
-        }
-        .img11 {
-        grid-area: img11;
-        padding-top: 2rem;
-        }
-        img {                    
-        width: 100%;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
-        display: block;
-        border-radius: 2rem;
+    .img9 {
+    grid-area: img9;
+    }
+    .img10 {
+    grid-area: img10;
+    }
+    .img11 {
+    grid-area: img11;
+    margin-bottom: 2rem;
+    }
+    img {                    
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    border-radius: 2rem;
+        &:hover {
+        transform: scale(1.2);
+        transition: transform 0.5s ease;
         }
     }
     .grilla-planos{
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "img12 img13"
         "img14 img15"
         "img16 img17"
         "img18 img19"
         "img20 img20";
-    padding-left: 2rem;  
-    padding-right: 2rem;
-    gap: 2rem;
+        @include padding(0rem, 2rem, 0rem, 2rem);
+        gap: 2rem;
+        overflow: hidden;
         .img12 {
         grid-area: img12;
-        padding-top: 2rem;
         }
         .img13 {
         grid-area: img13;
-        padding-top: 2rem;
         }
         .img14 {
         grid-area: img14;
-        padding-top: 2rem;
         }
-        .img15 {
+        .img15{
         grid-area: img15;
-        padding-top: 2rem;
         }
-        .img16 {
+        .img16{
         grid-area: img16;
-        padding-top: 2rem;
         }
-        .img17 {
+        .img17{
         grid-area: img17;
-        padding-top: 2rem;
         }
-        .img18 {
+        .img18{
         grid-area: img18;
-        padding-top: 2rem;
         }
-        .img19 {
+        .img19{
         grid-area: img19;
-        padding-top: 2rem;
         }
-        .img20 {
-        grid-area: img20;
-        padding-top: 2rem;
+        .img20{
+        grid-area:img20;
         }
         img {                    
         width: 100%;
@@ -233,15 +252,17 @@
         object-fit: cover;
         display: block;
         border-radius: 2rem;
+            &:hover {
+            transform: scale(1.2);
+            transition: transform 0.5s ease;
+            }
         }
     }
 
     /* contact */
     .formulario{
     padding: 2rem 2rem 2rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-start;
+    @include flex(column, flex-start, stretch);
     text-transform: uppercase;
     font-weight: bold;
     padding-bottom: 15%;
@@ -249,35 +270,31 @@
         padding-top: 2rem;
         }
         .formulario-email{
-        padding-top: 2rem;
+        @extend .formulario-nombre;
         }
         .formulario-mensaje{
-        padding-top: 2rem;
+        @extend .formulario-nombre;
         }
     }
 
     /* footer */
     .footer{
     height: 100px;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    background-color:$negro;
+    @include flex(row, space-between, center);
         .izquierda{
         font-size: 100%;
-        color: white;
-        padding: 2rem 2rem 2rem 2rem;
+        color: $blanco;
+        @include padding(2rem, 2rem, 2rem, 2rem);
         }
         .derecha{
-        font-size: 100%;
-        color: white;
-        padding: 2rem 2rem 2rem 2rem;
+        color: $blanco;
+        @extend .izquierda;
         }
         .centro{
-        font-size: 100%;
+        color: $blanco;
         text-decoration: none;
-        color: white;
-        padding: 2rem 2rem 2rem 2rem;
+        @extend .izquierda;
         }
     }
 }
