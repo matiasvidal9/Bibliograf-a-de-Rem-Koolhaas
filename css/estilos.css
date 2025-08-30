@@ -192,30 +192,54 @@ body {
     padding: 1rem 1rem 0rem 1rem;
   }
   /* bibliografia */
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
   .grilla-bibliografia {
     display: grid;
-    grid-template-areas: "imagen-bibliografia parrafo-1" "imagen-bibliografia parrafo-2" "imagen-bibliografia parrafo-3" "parrafo-4 parrafo-5" "h2 h2";
+    grid-template-areas: "imagen-bibliografia parrafo-1" "imagen-bibliografia parrafo-2" "imagen-bibliografia parrafo-3" "imagen-bibliografia parrafo-4" "imagen-bibliografia parrafo-5" "h2 h2";
   }
   .grilla-bibliografia .imagen-bibliografia {
     grid-area: imagen-bibliografia;
     width: 50vw;
+    aspect-ratio: 4/5;
+    border-radius: 0rem;
+    animation: slide-right 1s ease-in-out;
   }
-  .grilla-bibliografia .parrafo-bibliografia-1, .grilla-bibliografia .parrafo-bibliografia-5, .grilla-bibliografia .parrafo-bibliografia-4, .grilla-bibliografia .parrafo-bibliografia-3, .grilla-bibliografia .parrafo-bibliografia-2 {
+  .grilla-bibliografia .imagen-bibliografia:hover {
+    transform: scale(1);
+  }
+  .grilla-bibliografia .parrafo-bibliografia-1 {
     grid-area: parrafo-1;
     font-size: 20px;
     padding: 0rem 1rem 0rem 1rem;
   }
   .grilla-bibliografia .parrafo-bibliografia-2 {
     grid-area: parrafo-2;
+    font-size: 20px;
+    padding: 0rem 1rem 0rem 1rem;
   }
   .grilla-bibliografia .parrafo-bibliografia-3 {
     grid-area: parrafo-3;
+    font-size: 20px;
+    padding: 0rem 1rem 0rem 1rem;
   }
   .grilla-bibliografia .parrafo-bibliografia-4 {
     grid-area: parrafo-4;
+    font-size: 20px;
+    padding: 0rem 1rem 0rem 1rem;
   }
   .grilla-bibliografia .parrafo-bibliografia-5 {
     grid-area: parrafo-5;
+    font-size: 20px;
+    padding: 0rem 1rem 2rem 1rem;
   }
   .grilla-bibliografia .titulo-conferencias {
     padding-left: 2rem;
