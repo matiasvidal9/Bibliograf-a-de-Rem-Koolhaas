@@ -25,8 +25,8 @@
     @include tamaño(100%, 100vh);
     object-fit: cover;
         &:hover {
-            transform: scale(1);
-            }
+        transform: scale(1);
+        }
     }
     .home-texto{
     color: $blanco;
