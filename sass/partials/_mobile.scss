@@ -90,8 +90,7 @@
         display: grid;
         grid-column: 1fr;
         .imagen-bibliografia {
-            width: 100vw;
-            height: auto;
+            @include tamaño(100vw,auto);
         }
         p{
             font-size: 100%;
