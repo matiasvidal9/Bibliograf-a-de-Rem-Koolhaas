@@ -1,24 +1,8 @@
 @use "general" as*;
+@use "mixins" as*;
 
 @media screen and (max-width: 740px) {
 
-/* MIXIN-MOBILE */
-    @mixin flex($direction, $justify, $align) {
-        display: flex;
-        flex-direction: $direction;
-        justify-content: $justify;
-        align-items: $align;
-    }
-    @mixin tamaño($width, $height) {
-        width: $width;
-        height: $height;
-    }
-    @mixin padding($top, $right, $bottom, $left) {
-        padding: $top $right $bottom $left;
-    }
-    @mixin margin($top, $right, $bottom, $left) {
-        margin: $top $right $bottom $left;
-    }
 /* index */
     .imagenes-obras {
         height: 20rem;      
@@ -26,13 +10,13 @@
     }
     .home-texto{
         background-color: $negro;
-        @include tamaño(100%, 20rem);
+        @include tamaño(100%, auto);
         @include flex(row, center, center);
         .texto{
             color: $blanco;
             font-size: 100%;
             text-align: center;
-            @include padding(5%,5%,5%,5%);
+            @include padding(20%,5%,20%,5%);
         }
     }
     .subtitulo-carrusel{
@@ -88,7 +72,7 @@
 
     .grilla-bibliografia{
         display: grid;
-        grid-column: 1fr;
+        grid-template-columns: 1fr;
         .imagen-bibliografia {
             @include tamaño(100vw,auto);
         }
@@ -126,7 +110,7 @@
     }
     .formulario{
         display: block;
-        @include padding(1%,5%,67%,5%);
+        @include padding(2rem,5%,5rem,5%);
         .caja{
             width: 100%;
         }

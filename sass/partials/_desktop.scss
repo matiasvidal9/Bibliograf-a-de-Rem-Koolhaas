@@ -1,25 +1,9 @@
 @use "general" as*;
+@use "mixins" as*;
 
 /* DESKTOP */
 @media screen and (min-width: 740px) {
 
-/* MIXIN-MOBILE */
-    @mixin flex($direction, $justify, $align) {
-        display: flex;
-        flex-direction: $direction;
-        justify-content: $justify;
-        align-items: $align;
-    }
-    @mixin tamaño($width, $height) {
-        width: $width;
-        height: $height;
-    }
-    @mixin padding($top, $right, $bottom, $left) {
-        padding: $top $right $bottom $left;
-    }
-    @mixin margin($top, $right, $bottom, $left) {
-        margin: $top $right $bottom $left;
-    }
 /* index */
     .imagenes-obras {
     @include tamaño(100%, 100vh);
@@ -106,7 +90,8 @@
         }
         .menu-conferencias{
         display: grid;
-        grid-column: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        @include tamaño(100%, auto);
             .conferencias{
             color: $negro;
             font-size: 20px;
@@ -304,9 +289,9 @@
 
     /* footer */
     .footer{
-    height: 100px;
-    background-color:$negro;
+    @include padding(1.5rem, 2rem, 1.5rem, 2rem);
     @include flex(row, space-between, center);
+    background-color:$negro;
         .izquierda{
         font-size: 100%;
         color: $blanco;
