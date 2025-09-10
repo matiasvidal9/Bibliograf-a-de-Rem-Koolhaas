@@ -2,9 +2,9 @@
 @use "mixins" as*;
 
 /* DESKTOP */
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 769px) {
 
-/* index */
+/* INDEX */
     .imagenes-obras {
     @include tamaño(100%, 100vh);
     object-fit: cover;
@@ -27,7 +27,7 @@
     @include padding(1rem, 1rem, 0rem, 1rem);
     }
 
-/* bibliografia */
+/* BIBLIOGRAFIA */
     @keyframes slide-right {
         0% {
         transform: translateX(-100%);
@@ -144,19 +144,20 @@
         }
     }
 
-/* grilla dentro de los proyectos  */
+/* GRILLA DENTRO DE LOS PROYECTOS */
     .titulo-pagina{
+    @include padding(1rem, 1rem, 0rem, 1rem);
     font-weight: bold;
     text-transform:uppercase;
-    padding-left: 2rem;
     }
     .seccion-work{
+    @include padding(0rem, 0rem, 0rem, 1rem);
     text-decoration: none;
-    padding-left: 1%;
     color: $negro;
     }
     .distribucion-texto {
     @include padding(0rem,2rem ,0rem ,2rem);
+    font-size: 1rem;
     }
     .grilla {
     display: grid;
@@ -269,15 +270,19 @@
         }
     }
 
-    /* contact */
-    .formulario{
-    padding: 2rem 2rem 2rem 2rem;
-    @include flex(column, flex-start, stretch);
-    text-transform: uppercase;
+/* CONTACTO */
+    .titulo-contacto{
+    @include padding(1rem, 1rem, 0rem, 2rem);
     font-weight: bold;
-    padding-bottom: 15%;
+    text-transform:uppercase;
+    }
+    .formulario{
+    @include padding(1rem, 2rem, 1rem, 2rem);
+    @include flex(column, flex-start, stretch);
         .formulario-nombre{
-        padding-top: 2rem;
+        @include padding(1rem, 0rem, 0rem, 0rem);
+        text-transform: uppercase;
+        font-weight: bold;
         }
         .formulario-email{
         @extend .formulario-nombre;
@@ -287,7 +292,7 @@
         }
     }
 
-    /* footer */
+/* FOOTER */
     .footer{
     @include padding(1.5rem, 2rem, 1.5rem, 2rem);
     @include flex(row, space-between, center);

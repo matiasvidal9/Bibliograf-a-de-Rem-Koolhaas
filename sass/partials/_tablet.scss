@@ -1,0 +1,190 @@
+@use "general" as*;
+@use "mixins" as*;
+
+
+/* TABLET */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+/* INDEX */
+    .imagenes-obras {
+    @include tamaño(100%, 50vh);
+    }
+    .home-texto{
+    @include padding(5rem, 1rem, 5rem, 1rem);
+    @include tamaño(100%, auto);
+    @include flex(row, center, center);
+    color: $blanco;
+    background-color: $negro;
+    font-size: .9rem;
+    }
+    .subtitulo-carrusel{
+    @include padding(1rem, 1rem, 0rem, 1rem);
+    font-size: 1.5rem;
+    text-transform:uppercase;
+    font-weight: bold;
+    }
+
+/* BIBLIOGRAFIA */
+    @keyframes slide-right {
+        0% {
+        transform: translateX(-100%);
+        opacity: 0;
+        }
+        100% {
+        transform: translateX(0);
+        opacity: 1;
+        }
+    }
+    .grilla-bibliografia {
+    display: grid;
+    grid-template-columns: 1fr;
+        .imagen-bibliografia {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        border-radius: 0rem;
+        animation: slide-right 1s ease-in-out;
+            &:hover {
+            transform: scale(1);
+            }
+        }
+        .parrafo-bibliografia-1 {
+        @include padding(1rem, 1rem, 1rem, 1rem);
+        font-size: 1rem;
+        }
+        .parrafo-bibliografia-2 {
+        @include padding(0rem, 1rem, 1rem, 1rem);
+        font-size: 1rem;
+        }
+        .parrafo-bibliografia-3 {
+        @include padding(0rem, 1rem, 1rem, 1rem);
+        font-size: 1rem;
+        }
+        .parrafo-bibliografia-4 {
+        @include padding(0rem, 1rem, 1rem, 1rem);
+        font-size: 1rem;
+        }
+        .parrafo-bibliografia-5 {
+        @include padding(0rem, 1rem, 1rem, 1rem);
+        font-size: 1rem;
+        }
+        .titulo-conferencias{
+        @include padding(1rem, 1rem, 0rem, 1rem);
+        font-size: 1.5rem;
+        text-transform:uppercase;
+        font-weight: bold;
+        }
+        .menu-conferencias{
+        @include tamaño(100%,auto);
+        @include padding(1rem,0rem,1rem,1rem);
+        display: grid;
+        grid-template-columns: 1fr;
+            .conferencias{
+            color: $negro;
+            font-size: 1rem;
+            text-decoration: none;
+            }
+        }
+    }
+
+/* WORK */
+
+    .grilla-work{
+    @include padding(1rem, 1rem, 1rem, 1rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+        img {
+        @include tamaño(100%, auto);
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        display: block;
+        border-radius: 1rem;
+        }
+    }
+
+/* GRILLA DENTRO DE LOS PROYECTOS */
+    .titulo-pagina{
+    @include padding(1rem, 1rem, 0rem, 1rem);
+    font-weight: bold;
+    text-transform:uppercase;
+    font-size: 1.5rem;
+    }
+    .seccion-work{
+    @include padding(0rem, 0rem, 0rem, 1rem);
+    text-decoration: none;
+    color: $negro;
+    }
+    .distribucion-texto{
+    @include padding(1rem, 1rem, 1rem, 1rem);
+    font-size: 1rem;
+    }
+    .grilla{
+    @include padding(1rem, 1rem, 1rem, 1rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+        img {
+        @include tamaño(100%, auto);
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        display: block;
+        border-radius: 1rem;
+        }
+    }
+    .grilla-planos{
+    @include padding(0rem, 1rem, 1rem, 1rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+        img {
+        @include tamaño(100%, auto);
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        display: block;
+        border-radius: 1rem;
+        }
+    }
+
+/* CONTACTO */
+    .titulo-contacto{
+    @include padding(1rem, 1rem, 0rem, 2rem);
+    font-weight: bold;
+    text-transform:uppercase;
+    }
+    .formulario{
+    @include padding(1rem, 2rem, 2rem, 2rem);
+    @include flex(column, flex-start, stretch);
+        .formulario-nombre{
+        @include padding(1rem, 0rem, 0rem, 0rem);
+        }
+        .formulario-email{
+        @include padding(1rem, 0rem, 0rem, 0rem);
+        }
+        .formulario-mensaje{
+        @include padding(1rem, 0rem, 0rem, 0rem);
+        }
+    }
+
+/* FOOTER */
+    .footer{
+    @include padding(1.5rem, 2rem, 1.5rem, 2rem);
+    @include flex(row, space-between, center);
+    background-color:$negro;
+        .izquierda{
+        font-size: 100%;
+        color: $blanco;
+        @include padding(2rem, 2rem, 2rem, 2rem);
+        }
+        .derecha{
+        font-size: 100%;
+        color: $blanco;
+        @include padding(2rem, 2rem, 2rem, 2rem);
+        }
+        .centro{
+        text-decoration: none;
+        font-size: 100%;
+        color: $blanco;
+        @include padding(2rem, 2rem, 2rem, 2rem);
+        }
+    }
+}

@@ -23,7 +23,7 @@ body {
   color: #ffffff;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 480px) {
   /* index */
   .imagenes-obras {
     height: 20rem;
@@ -162,9 +162,203 @@ body {
     text-decoration: none;
   }
 }
+/* TABLET */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* INDEX */
+  .imagenes-obras {
+    width: 100%;
+    height: 50vh;
+  }
+  .home-texto {
+    padding: 5rem 1rem 5rem 1rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 0.9rem;
+  }
+  .subtitulo-carrusel {
+    padding: 1rem 1rem 0rem 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  /* BIBLIOGRAFIA */
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .grilla-bibliografia {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grilla-bibliografia .imagen-bibliografia {
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 0rem;
+    animation: slide-right 1s ease-in-out;
+  }
+  .grilla-bibliografia .imagen-bibliografia:hover {
+    transform: scale(1);
+  }
+  .grilla-bibliografia .parrafo-bibliografia-1 {
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 1rem;
+  }
+  .grilla-bibliografia .parrafo-bibliografia-2 {
+    padding: 0rem 1rem 1rem 1rem;
+    font-size: 1rem;
+  }
+  .grilla-bibliografia .parrafo-bibliografia-3 {
+    padding: 0rem 1rem 1rem 1rem;
+    font-size: 1rem;
+  }
+  .grilla-bibliografia .parrafo-bibliografia-4 {
+    padding: 0rem 1rem 1rem 1rem;
+    font-size: 1rem;
+  }
+  .grilla-bibliografia .parrafo-bibliografia-5 {
+    padding: 0rem 1rem 1rem 1rem;
+    font-size: 1rem;
+  }
+  .grilla-bibliografia .titulo-conferencias {
+    padding: 1rem 1rem 0rem 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .grilla-bibliografia .menu-conferencias {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grilla-bibliografia .menu-conferencias .conferencias {
+    color: #000000;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  /* WORK */
+  .grilla-work {
+    padding: 1rem 1rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .grilla-work img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+  }
+  /* GRILLA DENTRO DE LOS PROYECTOS */
+  .titulo-pagina {
+    padding: 1rem 1rem 0rem 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+  .seccion-work {
+    padding: 0rem 0rem 0rem 1rem;
+    text-decoration: none;
+    color: #000000;
+  }
+  .distribucion-texto {
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 1rem;
+  }
+  .grilla {
+    padding: 1rem 1rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .grilla img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+  }
+  .grilla-planos {
+    padding: 0rem 1rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .grilla-planos img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+  }
+  /* CONTACTO */
+  .titulo-contacto {
+    padding: 1rem 1rem 0rem 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .formulario {
+    padding: 1rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  .formulario .formulario-nombre {
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .formulario .formulario-email {
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .formulario .formulario-mensaje {
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  /* FOOTER */
+  .footer {
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+  }
+  .footer .izquierda {
+    font-size: 100%;
+    color: #ffffff;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  .footer .derecha {
+    font-size: 100%;
+    color: #ffffff;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  .footer .centro {
+    text-decoration: none;
+    font-size: 100%;
+    color: #ffffff;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+}
 /* DESKTOP */
-@media screen and (min-width: 740px) {
-  /* index */
+@media screen and (min-width: 769px) {
+  /* INDEX */
   .imagenes-obras {
     width: 100%;
     height: 100vh;
@@ -191,7 +385,7 @@ body {
     font-weight: bold;
     padding: 1rem 1rem 0rem 1rem;
   }
-  /* bibliografia */
+  /* BIBLIOGRAFIA */
   @keyframes slide-right {
     0% {
       transform: translateX(-100%);
@@ -295,19 +489,20 @@ body {
     display: block;
     border-radius: 2rem;
   }
-  /* grilla dentro de los proyectos  */
+  /* GRILLA DENTRO DE LOS PROYECTOS */
   .titulo-pagina {
+    padding: 1rem 1rem 0rem 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    padding-left: 2rem;
   }
   .seccion-work {
+    padding: 0rem 0rem 0rem 1rem;
     text-decoration: none;
-    padding-left: 1%;
     color: #000000;
   }
   .distribucion-texto {
     padding: 0rem 2rem 0rem 2rem;
+    font-size: 1rem;
   }
   .grilla {
     display: grid;
@@ -408,21 +603,25 @@ body {
     transform: scale(1.2);
     transition: transform 0.5s ease;
   }
-  /* contact */
+  /* CONTACTO */
+  .titulo-contacto {
+    padding: 1rem 1rem 0rem 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
   .formulario {
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding-bottom: 15%;
   }
   .formulario .formulario-nombre, .formulario .formulario-mensaje, .formulario .formulario-email {
-    padding-top: 2rem;
+    padding: 1rem 0rem 0rem 0rem;
+    text-transform: uppercase;
+    font-weight: bold;
   }
-  /* footer */
+  /* FOOTER */
   .footer {
     padding: 1.5rem 2rem 1.5rem 2rem;
     display: flex;
