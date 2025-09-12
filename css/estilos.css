@@ -44,13 +44,51 @@ body {
     text-align: center;
     padding: 20% 5% 20% 5%;
   }
-  .subtitulo-carrusel {
+  .titulo-index {
     font-size: 100%;
     text-transform: uppercase;
     font-weight: bold;
     padding: 1rem 1rem 0rem 1rem;
   }
+  /* bibliografia */
+  .grilla-bibliografia {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grilla-bibliografia .imagen-bibliografia {
+    width: 100vw;
+    height: auto;
+  }
+  .grilla-bibliografia p {
+    font-size: 100%;
+    padding: 2rem 2rem 0rem 2rem;
+  }
+  .grilla-bibliografia .titulo-conferencias {
+    font-size: 100%;
+    padding-left: 2rem;
+    text-transform: uppercase;
+  }
+  .grilla-bibliografia .menu-conferencias {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 80%;
+    padding-left: 2rem;
+  }
+  .grilla-bibliografia .menu-conferencias .conferencias {
+    font-size: 100%;
+    color: black;
+    padding-right: 2rem;
+    text-decoration: none;
+  }
   /* WORK */
+  .titulo-work {
+    font-size: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem 1rem 0rem 1rem;
+  }
   .grilla-work {
     display: grid;
     grid-template-columns: 1fr;
@@ -93,38 +131,6 @@ body {
     width: 90%;
     height: auto;
     margin: 0% 5% 5% 5%;
-  }
-  /* bibliografia */
-  .grilla-bibliografia {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .grilla-bibliografia .imagen-bibliografia {
-    width: 100vw;
-    height: auto;
-  }
-  .grilla-bibliografia p {
-    font-size: 100%;
-    padding: 2rem 2rem 0rem 2rem;
-  }
-  .grilla-bibliografia .titulo-conferencias {
-    font-size: 100%;
-    padding-left: 2rem;
-    text-transform: uppercase;
-  }
-  .grilla-bibliografia .menu-conferencias {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-size: 80%;
-    padding-left: 2rem;
-  }
-  .grilla-bibliografia .menu-conferencias .conferencias {
-    font-size: 100%;
-    color: black;
-    padding-right: 2rem;
-    text-decoration: none;
   }
   /* contacto */
   .titulo-pagina-contacto {
@@ -181,7 +187,7 @@ body {
     background-color: #000000;
     font-size: 0.9rem;
   }
-  .subtitulo-carrusel {
+  .titulo-index {
     padding: 1rem 1rem 0rem 1rem;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -250,6 +256,12 @@ body {
     text-decoration: none;
   }
   /* WORK */
+  .titulo-work {
+    font-size: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem 1rem 0rem 1rem;
+  }
   .grilla-work {
     padding: 1rem 1rem 1rem 1rem;
     display: grid;
@@ -379,8 +391,8 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .subtitulo-carrusel {
-    font-size: 120%;
+  .titulo-index {
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: bold;
     padding: 1rem 1rem 0rem 1rem;
@@ -439,7 +451,8 @@ body {
     padding-left: 2rem;
     grid-area: h2;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 2rem;
+    font-weight: bold;
   }
   .grilla-bibliografia .menu-conferencias {
     display: grid;
@@ -455,6 +468,12 @@ body {
   }
   /* WORK */
   /* grilla-proyectos */
+  .titulo-work {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem 1rem 0rem 2rem;
+  }
   .grilla-work {
     display: grid;
     grid-template-areas: "img1 img2" "img3 img4" "img5 img6";

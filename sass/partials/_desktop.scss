@@ -20,8 +20,8 @@
     @include tamaño(100%, 20rem);
     @include flex(row, center, center);
     }
-    .subtitulo-carrusel{
-    font-size: 120% ;
+    .titulo-index{
+    font-size: 2rem ;
     text-transform:uppercase;
     font-weight: bold;
     @include padding(1rem, 1rem, 0rem, 1rem);
@@ -86,7 +86,8 @@
         padding-left: 2rem;
         grid-area: h2;
         text-transform:uppercase;
-        font-size: 30px;
+        font-size: 2rem;
+        font-weight: bold;
         }
         .menu-conferencias{
         display: grid;
@@ -104,6 +105,12 @@
 /* WORK */
 
 /* grilla-proyectos */
+    .titulo-work{
+    font-size: 2rem;
+    text-transform:uppercase;
+    font-weight: bold;
+    @include padding(1rem, 1rem, 0rem, 2rem);
+    }
     .grilla-work {
     display: grid;
     grid-template-areas:

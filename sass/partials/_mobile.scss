@@ -19,14 +19,53 @@
             @include padding(20%,5%,20%,5%);
         }
     }
-    .subtitulo-carrusel{
+    .titulo-index{
         font-size: 100% ;
         text-transform:uppercase;
         font-weight: bold;
         @include padding(1rem, 1rem, 0rem, 1rem);
     }
 
+    /* bibliografia */
+
+    .grilla-bibliografia{
+        display: grid;
+        grid-template-columns: 1fr;
+        .imagen-bibliografia {
+            @include tamaño(100vw,auto);
+        }
+        p{
+            font-size: 100%;
+            @include padding(2rem, 2rem, 0rem, 2rem);
+        }
+        .titulo-conferencias{
+            font-size: 100%;
+            padding-left: 2rem;
+            text-transform:uppercase;
+        }
+        .menu-conferencias {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-size: 80%;
+            padding-left: 2rem;
+            .conferencias{
+                font-size: 100%;
+                color: black;
+                padding-right: 2rem;
+                text-decoration: none;
+            }
+        }
+    }
+
 /* WORK */
+    .titulo-work{
+    font-size: 100% ;
+    text-transform:uppercase;
+    font-weight: bold;
+    @include padding(1rem, 1rem, 0rem, 1rem);
+    }
     .grilla-work{
         display: grid;
         grid-template-columns: 1fr;
@@ -68,38 +107,6 @@
         }
     }
 
-/* bibliografia */
-
-    .grilla-bibliografia{
-        display: grid;
-        grid-template-columns: 1fr;
-        .imagen-bibliografia {
-            @include tamaño(100vw,auto);
-        }
-        p{
-            font-size: 100%;
-            @include padding(2rem, 2rem, 0rem, 2rem);
-        }
-        .titulo-conferencias{
-            font-size: 100%;
-            padding-left: 2rem;
-            text-transform:uppercase;
-        }
-        .menu-conferencias {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            justify-content: flex-start;
-            font-size: 80%;
-            padding-left: 2rem;
-            .conferencias{
-                font-size: 100%;
-                color: black;
-                padding-right: 2rem;
-                text-decoration: none;
-            }
-        }
-    }
 
 /* contacto */
     .titulo-pagina-contacto{

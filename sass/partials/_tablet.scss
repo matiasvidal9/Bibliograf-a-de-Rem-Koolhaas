@@ -17,7 +17,7 @@
     background-color: $negro;
     font-size: .9rem;
     }
-    .subtitulo-carrusel{
+    .titulo-index{
     @include padding(1rem, 1rem, 0rem, 1rem);
     font-size: 1.5rem;
     text-transform:uppercase;
@@ -87,7 +87,12 @@
     }
 
 /* WORK */
-
+    .titulo-work{
+    font-size: 100% ;
+    text-transform:uppercase;
+    font-weight: bold;
+    @include padding(1rem, 1rem, 0rem, 1rem);
+    }
     .grilla-work{
     @include padding(1rem, 1rem, 1rem, 1rem);
     display: grid;
