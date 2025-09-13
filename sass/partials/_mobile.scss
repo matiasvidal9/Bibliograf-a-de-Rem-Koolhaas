@@ -127,6 +127,7 @@
     .footer{
         @include flex(row,space-between,flex-start);
         @include padding(5%,5%,5%,5%);
+        background-color: $negro;
         .izquierda{
             color: $blanco;
             font-size: 60%;
